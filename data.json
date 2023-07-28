@@ -629,5 +629,31 @@
       "link": "#"
     }
   ]
-
+  ,
+  "bannerarr": [
+    {
+      "link": "#",
+      "image": "banner_1.jpg",
+      "id": "banner1",
+      "title": "배너1"
+    },
+    {
+      "link": "#",
+      "image": "banner_2.jpg",
+      "id": "banner2",
+      "title": "배너2"
+    },
+    {
+      "link": "#",
+      "image": "banner_3.jpg",
+      "id": "banner3",
+      "title": "배너3"
+    },
+    {
+      "link": "#",
+      "image": "banner_4.jpg",
+      "id": "banner4",
+      "title": "배너4"
+    }
+  ]
 }

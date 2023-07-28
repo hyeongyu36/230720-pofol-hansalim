@@ -1142,16 +1142,66 @@ body {
 }
 
 /* 브랜드관 */
-.brand{
+.brand {
   position: relative;
   display: block;
   background-color: #f3f9f0;
 }
-.brand .slide-control{
+.brand .slide-control {
   margin-top: 25px;
-
 }
-.brand-slide{
+.brand-slide {
   position: relative;
   display: block;
+}
+.brand-box {
+  position: relative;
+  display: block;
+  width: 285px;
+  height: 285px;
+  background-color: #fff;
+  padding: 35px 30px;
+}
+.brand-box a {
+  position: relative;
+  display: block;
+  text-align: center;
+}
+.brand-box a img {
+  position: relative;
+  display: inline-block;
+}
+.brand-box a p {
+  position: relative;
+  display: block;
+  font-size: 18px;
+  font-weight: 500;
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+.brand-info {
+  position: relative;
+  display: block;
+}
+.brand-info > li {
+  position: relative;
+  display: block;
+  width: 50%;
+  border-right: 1px solid #e3e3e3;
+  float: left;
+}
+.brand-info > li:last-child {
+  border-right: 0;
+}
+.brand-info-title {
+  text-align: center;
+  font-size: 16px;
+  color: #666;
+  margin: 5px 0;
+}
+.brand-info-value {
+  position: relative;
+  display: block;
+  font-size: 18px;
+  font-weight: 500;
 }
