@@ -1202,6 +1202,50 @@ body {
 .brand-info-value {
   position: relative;
   display: block;
-  font-size: 18px;
+  font-size: 17px;
   font-weight: 500;
 }
+/* banner */
+.banner {
+  position: relative;
+  display: block;
+  padding-bottom: 0;
+}
+.banner-slide {
+  position: relative;
+  display: block;
+}
+.banner-slide a {
+  position: relative;
+  display: block;
+}
+.banner-slide-next,
+.banner-slide-prev {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: block;
+  width: 19px;
+  height: 34px;
+  cursor: pointer;
+  border: 0;
+  z-index: 99;
+}
+.banner-slide-prev {
+  left: 20px;
+  background: url("../images/banner_arrow.png");
+  background-position: 0px -34px;
+}
+.banner-slide-prev:hover{
+  background-position: 0px 0px;
+}
+.banner-slide-next {
+  right: 20px;
+  background: url("../images/banner_arrow.png");
+  transform: translateY(-50%) rotateY(180deg);
+  background-position: 0px -34px;
+}
+.banner-slide-next:hover{
+  background-position: 0px 0px;
+}
+
