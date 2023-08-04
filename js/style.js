@@ -39,6 +39,8 @@ window.onload = function () {
       BANNER_ARR = obj.bannerarr;
       SEASON_ARR = obj.season;
       REVIEW_ARR = obj.review;
+      NOTICE_ARR = obj.notice;
+      GOODNEWS_ARR = obj.goodnews;
 
       // 비주얼 화면에 배치한다.
       showVisual();
@@ -62,6 +64,10 @@ window.onload = function () {
       showSeason();
       // 리뷰 목록을 화면에 배치
       showReview();
+      // 공지사항 목록을 화면에 배치
+      showNotice();
+      // 물품소식 목록을 화면에 배치
+      showGoodnews();
     }
   };
   // 자료를 호출한다.
@@ -105,6 +111,12 @@ window.onload = function () {
   // 리뷰 화면출력
   let REVIEW_ARR;
   let reviewTag = document.getElementById("data-review");
+  // 공지사항 화면출력
+  let NOTICE_ARR;
+  let noticeTag = document.getElementById("data-notice");
+  // 물품소식 화면출력
+  let GOODNEWS_ARR;
+  let goodnewsTag = document.getElementById("data-good-news");
   //================================================
   // 비주얼 화면 출력 기능
   function showVisual() {
@@ -686,6 +698,71 @@ window.onload = function () {
         type: "fraction",
       },
     });
+  }
+  // 공지사항 화면출력기능
+  function showNotice() {
+    let html = "";
+    // 데이터갱신
+    NOTICE_ARR.forEach(function (item) {
+      const tag = `
+      <li>
+        <a href = "${item.link}">
+         <span>
+          ${item.title}
+         </span><em>${item.date}</em>
+        </a>
+      </li>
+      `;
+      html += tag;
+    });
+    noticeTag.innerHTML = html;
+  }
+  // 물품소식 화면출력기능
+  function showGoodnews() {
+    let html = "";
+    // 데이터갱신
+    GOODNEWS_ARR.forEach(function (item) {
+      const tag = `
+      <li>
+      <a href = "${item.link}">
+       <span>
+        ${item.title}
+       </span><em>${item.date}</em>
+      </a>
+    </li>
+      `;
+      html += tag;
+    });
+    goodnewsTag.innerHTML = html;
+  }
+  // 커뮤니티 탭메뉴
+  // 탭버튼
+  const tabBtArr = document.querySelectorAll(".community-bt");
+  // 탭 내용
+  const tabConArr = document.querySelectorAll(".community-notice dd");
+  // 탭포커스
+  let tabFocusIndex = 0;
+  // 탭 버튼 클릭 처리
+  tabBtArr.forEach(function (item, index) {
+    item.addEventListener("click", function () {
+      tabFocusIndex = index;
+      tabFocusFn();
+    });
+  });
+  // 탭 포커스 함수를 생성
+  function tabFocusFn() {
+    // 포커스 css를 적용 및 제거
+    // 일단 모두 제거
+    tabBtArr.forEach(function (item) {
+      item.classList.remove("community-bt-active");
+    });
+    // 인덱스에 해당하는 것만 적용
+    tabBtArr[tabFocusIndex].classList.add("community-bt-active");
+    // 내용에서 일단 모두 제거
+    tabConArr.forEach(function (item) {
+      item.classList.remove("community-visible-active");
+    });
+    tabConArr[tabFocusIndex].classList.add("community-visible-active");
   }
   // =================================================
   // 펼침 목록들 보기 기능
