@@ -1439,7 +1439,7 @@ body {
 .season-good-total {
   display: block;
   position: relative;
-  background-color: #ff9933;
+  /* background-color: #ff9933; */
   padding-left: 40px;
   font-size: 20px;
   color: #000;
@@ -1456,6 +1456,105 @@ body {
   font-size: 20px;
   padding: 18px 0;
 }
-.buy-good em{
+.buy-good em {
   font-style: normal;
+}
+/* 이용후기 */
+.review {
+  display: block;
+  position: relative;
+  background-color: #fcf6f2;
+}
+.review .slide-control {
+  margin-top: 25px;
+}
+.review-slide {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 235px;
+}
+.review-box {
+  position: relative;
+  display: block;
+  width: 290px;
+  height: 100%;
+  background-color: #fff;
+  /* padding: 30px 27px 30px 20px; */
+  padding: 20px;
+}
+.review-box a {
+  position: relative;
+  display: block;
+}
+.review-box-desc {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 66px;
+  /* background-color: #76bd42; */
+  margin-bottom: 15px;
+}
+.review-box-title {
+  display: block;
+  position: relative;
+  font-size: 17px;
+  /* 말줄임 */
+  width: 165px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-bottom: 5px;
+}
+.review-box-star {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 20px;
+  font-size: 17px;
+  font-weight: 500;
+  padding-left: 25px;
+}
+.review-box-star::before {
+  content: "";
+  background: url("../images/icoRating.png") no-repeat;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 18px;
+  height: 18px;
+  transform: translateY(-40%);
+}
+.review-box-img {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 66px;
+  height: 66px;
+  overflow: hidden;
+}
+.review-box-img img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+.review-box-txt {
+  position: relative;
+  display: block;
+  width: 100%;
+  font-size: 13px;
+  /* 2줄 말줄임 */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  margin-bottom: 20px;
+}
+.review-box-user {
+  position: relative;
+  display: block;
+  font-size: 13x;
 }
