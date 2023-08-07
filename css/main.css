@@ -1604,9 +1604,15 @@ body {
   font-size: 20px;
   color: #999;
 }
-.community-bt-active{
+.community-bt-active {
   color: #000;
   font-weight: 700;
+}
+.community-notice > dl > dd {
+  position: absolute;
+  left: 0;
+  top: 50px;
+  display: none;
 }
 .community-info {
   position: relative;
@@ -1615,6 +1621,42 @@ body {
   padding: 0 40px;
   float: left;
 }
+.community-visible-active {
+  display: block !important;
+}
+.notice-list {
+  position: relative;
+  display: block;
+}
+.notice-list > li {
+  position: relative;
+  display: block;
+  line-height: 1;
+  margin-bottom: 15px;
+}
+.notice-list > li > a {
+  position: relative;
+  display: block;
+  font-size: 13px;
+}
+.notice-list > li > a > span {
+  position: relative;
+  display: inline-block;
+  width: 240px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.notice-list > li > a > em {
+  position: relative;
+  display: inline-block;
+  width: calc(100% - 240px);
+  color: #999;
+  font-style: normal;
+  text-align: right;
+  vertical-align: 2px;
+}
+
 .community-info h3 {
   position: relative;
   display: block;
